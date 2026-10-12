@@ -1,0 +1,10 @@
+{
+  "description": "This web application streamlines UI design processes for product teams, enabling efficient collaboration and rapid prototyping to enhance user experience.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

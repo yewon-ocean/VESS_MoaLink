@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans KR", system-ui, sans-serif;
+}
+
+:root {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #1f2328;
+  background: #f7f8fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+button {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(47, 137, 114, 0.32);
+  outline-offset: 3px;
+}
+
+.hero-grid {
+  background-image: radial-gradient(#8cb5aa 0.7px, transparent 0.7px);
+  background-size: 22px 22px;
+  mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+}
+
+.logo-mark {
+  position: relative;
+  display: inline-flex;
+  align-items: end;
+  justify-content: center;
+  width: 30px;
+  height: 27px;
+  overflow: hidden;
+}
+
+.logo-mark span {
+  position: absolute;
+  bottom: -3px;
+  width: 10px;
+  height: 28px;
+  border: 4px solid #ffc93c;
+  border-radius: 10px 10px 0 0;
+}
+
+.logo-mark span:first-child {
+  left: 1px;
+  transform: rotate(23deg);
+}
+
+.logo-mark span:nth-child(2) {
+  z-index: 1;
+  height: 24px;
+}
+
+.logo-mark span:last-child {
+  right: 1px;
+  transform: rotate(-23deg);
+}
+
+.logo-mark.light span {
+  border-color: #8ed1bd;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 12px;
+  padding: 0 24px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.primary-button {
+  background: #ffc93c;
+  color: #1f2328;
+  box-shadow: none;
+}
+
+.primary-button:hover {
+  background: #f5a800;
+  transform: translateY(-2px);
+  box-shadow: none;
+}
+
+.secondary-button {
+  border: 1px solid #cddbd6;
+  background: white;
+  color: #1f2328;
+}
+
+.secondary-button:hover {
+  border-color: #76a99b;
+  background: #f8fcfa;
+  transform: translateY(-2px);
+}
+
+.section-eyebrow {
+  margin-bottom: 10px;
+  color: #9b6200;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.section-title {
+  color: #1f2328;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.25;
+}
+
+.section-copy {
+  max-width: 580px;
+  margin-top: 12px;
+  color: #5b6470;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e1e9e6;
+  border-radius: 20px;
+  background: white;
+  padding: 26px;
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.service-card::after {
+  position: absolute;
+  right: -25px;
+  bottom: -35px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff6d7;
+  content: "";
+}
+
+.service-card:hover {
+  border-color: #e5b72f;
+  transform: translateY(-5px);
+  box-shadow: none;
+}
+
+.service-card button {
+  position: relative;
+  z-index: 1;
+}
+
+.roadmap-card {
+  position: relative;
+}
+
+.organization-card {
+  border: 1px solid #e2e9e6;
+  border-radius: 22px;
+  padding: 22px;
+  background: white;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.organization-card:hover {
+  transform: translateY(-4px);
+  border-color: #d7b651;
+  box-shadow: none;
+}
+
+.org-icon {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+}
+
+.org-icon.lavender {
+  color: #705aa1;
+  background: #f0edfb;
+}
+
+.org-icon.rose {
+  color: #ad5b68;
+  background: #fcecf0;
+}
+
+.org-icon.mint {
+  color: #347c68;
+  background: #e8f5f0;
+}
+
+@media (max-width: 639px) {
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+
+  .section-copy {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
